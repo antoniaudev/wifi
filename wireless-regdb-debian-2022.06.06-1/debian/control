@@ -1,0 +1,36 @@
+Source: wireless-regdb
+Section: net
+Priority: optional
+Maintainer: Debian kernel team <debian-kernel@lists.debian.org>
+Uploaders: Ben Hutchings <benh@debian.org>, Romain Perier <romain.perier@gmail.com>
+Build-Depends: debhelper-compat (= 12),
+ openssl,
+ python3,
+ python3-m2crypto,
+ quilt
+Rules-Requires-Root: no
+Standards-Version: 4.5.0
+Vcs-Git: https://salsa.debian.org/kernel-team/wireless-regdb.git
+Vcs-Browser: https://salsa.debian.org/kernel-team/wireless-regdb
+Homepage: https://wireless.wiki.kernel.org/en/developers/regulatory/wireless-regdb
+
+Package: wireless-regdb
+Architecture: all
+Multi-Arch: foreign
+Depends: ${misc:Depends}
+Description: wireless regulatory database for Linux
+ This package provides a machine-readable database of legal
+ regulations on radio emissions that affect use of wireless networking.
+ The Linux kernel and drivers use this to maintain compliance with
+ those regulations.
+
+Package: wireless-regdb-udeb
+Package-Type: udeb
+Architecture: all
+Section: debian-installer
+Depends: ${misc:Depends}
+Description: wireless regulatory database for Linux - udeb
+ This package provides a machine-readable database of legal
+ regulations on radio emissions that affect use of wireless networking.
+ The Linux kernel and drivers use this to maintain compliance with
+ those regulations.
